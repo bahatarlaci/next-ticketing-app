@@ -105,52 +105,20 @@ const TicketForm = ({ ticket }) => {
         </select>
 
         <label>Priority</label>
-        <div>
-          <input
-            id="priority-1"
-            name="priority"
-            type="radio"
-            onChange={handleChange}
-            value={1}
-            checked={formData.priority == 1}
-          />
-          <label>1</label>
-          <input
-            id="priority-2"
-            name="priority"
-            type="radio"
-            onChange={handleChange}
-            value={2}
-            checked={formData.priority == 2}
-          />
-          <label>2</label>
-          <input
-            id="priority-3"
-            name="priority"
-            type="radio"
-            onChange={handleChange}
-            value={3}
-            checked={formData.priority == 3}
-          />
-          <label>3</label>
-          <input
-            id="priority-4"
-            name="priority"
-            type="radio"
-            onChange={handleChange}
-            value={4}
-            checked={formData.priority == 4}
-          />
-          <label>4</label>
-          <input
-            id="priority-5"
-            name="priority"
-            type="radio"
-            onChange={handleChange}
-            value={5}
-            checked={formData.priority == 5}
-          />
-          <label>5</label>
+        <div className="flex gap-2">
+          {[1, 2, 3, 4, 5].map((priority) => (
+            <div key={priority}>
+              <input
+                id={`priority-${priority}`}
+                name="priority"
+                type="radio"
+                onChange={handleChange}
+                value={priority}
+                checked={formData.priority == priority}
+              />
+              <label htmlFor={`priority-${priority}`}>{priority}</label>
+            </div>
+          ))}
         </div>
         <label>Progress</label>
         <input
