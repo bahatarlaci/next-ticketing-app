@@ -162,6 +162,7 @@ const TicketForm = ({ ticket }) => {
           max={100}
           onChange={handleChange}
         />
+        <p>{formData.progress}%</p>
         <label>Status</label>
         <select name="status" value={formData.status} onChange={handleChange}>
           <option value="Not started">Not started</option>
