@@ -1,6 +1,6 @@
-# Next.Js 13 Ticketing App
+# Next.Js 14 Ticketing App
 
-A simple Fullstack CRUD Application with Next.js 14.1 and MongoDB
+A simple Fullstack CRUD Application with Next.js 14 and MongoDB
 
 ## Languages and Tools:
 
